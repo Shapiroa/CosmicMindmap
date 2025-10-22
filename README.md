@@ -1,6 +1,14 @@
-# Clcode
+# CosmicMindmap
 
-A TypeScript web application.
+A mindmapping tool that allows you to think in outer space. Built with React, TypeScript, and Three.js.
+
+## Features
+
+- 🌌 Interactive cosmos background with distant starfield
+- 📝 Click anywhere to create notes
+- 🔗 Drag from notes to create connections
+- ⌨️ Press Enter to edit notes
+- 🖱️ Subtle mouse parallax effect for depth
 
 ## Getting Started
 
@@ -23,6 +31,8 @@ Run the development server with hot reload:
 npm run dev
 ```
 
+The app will open at http://localhost:3000
+
 ### Building
 
 Build the TypeScript project:
@@ -31,10 +41,10 @@ Build the TypeScript project:
 npm run build
 ```
 
-Run the built application:
+Preview the production build:
 
 ```bash
-npm start
+npm run preview
 ```
 
 ### Testing
@@ -82,12 +92,22 @@ npm run type-check
 ## Project Structure
 
 ```
-clcode/
+CosmicMindmap/
 ├── src/
-│   ├── components/   # Reusable UI components
-│   ├── services/     # Business logic and API calls
-│   ├── utils/        # Utility functions and helpers
-│   └── index.ts      # Main entry point
-├── dist/             # Compiled output (generated)
-└── node_modules/     # Dependencies (generated)
+│   ├── components/      # React components
+│   │   ├── CosmosBackground.tsx  # Three.js starfield
+│   │   ├── Note.tsx              # Note component
+│   │   └── ArrowCanvas.tsx       # Arrow rendering
+│   ├── App.tsx          # Main application
+│   ├── main.tsx         # React entry point
+│   └── types.ts         # TypeScript types
+├── dist/                # Build output (generated)
+└── node_modules/        # Dependencies (generated)
 ```
+
+## How to Use
+
+1. **Create a note**: Click anywhere on the canvas
+2. **Edit a note**: Press Enter when a note is selected
+3. **Create a connection**: Click and drag from a note to create an arrow
+4. **Explore the cosmos**: Move your mouse to see the subtle parallax effect
